@@ -194,6 +194,9 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
     const key = await page.getAttribute('#orderForm', 'data-web3forms-key');
     /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(key || '') && (await page.textContent('#sendLabel')) === 'Send My Order'
       ? pass(vp.name, 'form', 'Order emails are switched on (Web3Forms key present)') : fail(vp.name, 'form', 'Web3Forms key missing or malformed: ' + key);
+    // Current prices (client-confirmed): X-Small 150, Small 250, Medium 300, Large 350
+    const prices = await page.evaluate(() => [...document.querySelectorAll('.size .price')].map(e => e.textContent.trim()).join(','));
+    prices === '$150,$250,$300,$350' ? pass(vp.name, 'content', 'Prices correct: ' + prices) : fail(vp.name, 'content', 'Prices wrong: ' + prices);
     // Social links present
     const socials = await page.evaluate(() => ({ tt: document.querySelectorAll('a[href="https://www.tiktok.com/@taneshap1105"]').length, ig: document.querySelectorAll('a[href="https://www.instagram.com/creationsby_tp/"]').length, ld: JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent).sameAs.length }));
     socials.tt >= 3 && socials.ig >= 3 && socials.ld === 2 ? pass(vp.name, 'social', `TikTok (${socials.tt}) + Instagram (${socials.ig}) linked, schema sameAs ok`) : fail(vp.name, 'social', JSON.stringify(socials));
