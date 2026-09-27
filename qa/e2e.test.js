@@ -23,6 +23,10 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
 
 (async () => {
   const browser = await chromium.launch({ executablePath: EXE });
+  // Tests must never send real order emails: every context answers Web3Forms with a fake success.
+  const fakeWeb3Forms = ctx => ctx.route('https://api.web3forms.com/**', r => r.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ success: true, message: 'test' }) }));
+  const realNewContext = browser.newContext.bind(browser);
+  browser.newContext = async opts => { const c = await realNewContext(opts); await fakeWeb3Forms(c); return c; };
 
   for (const vp of VIEWPORTS) {
     const ctx = await browser.newContext({
@@ -187,6 +191,9 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
       cur[0] === 'Gallery' && cur[1] === 0 ? pass(vp.name, 'nav', 'Active nav link tracks section and clears at top') : fail(vp.name, 'nav', 'Nav highlight: ' + cur.join());
     }
 
+    const key = await page.getAttribute('#orderForm', 'data-web3forms-key');
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(key || '') && (await page.textContent('#sendLabel')) === 'Send My Order'
+      ? pass(vp.name, 'form', 'Order emails are switched on (Web3Forms key present)') : fail(vp.name, 'form', 'Web3Forms key missing or malformed: ' + key);
     // Social links present
     const socials = await page.evaluate(() => ({ tt: document.querySelectorAll('a[href="https://www.tiktok.com/@taneshap1105"]').length, ig: document.querySelectorAll('a[href="https://www.instagram.com/creationsby_tp/"]').length, ld: JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent).sameAs.length }));
     socials.tt >= 3 && socials.ig >= 3 && socials.ld === 2 ? pass(vp.name, 'social', `TikTok (${socials.tt}) + Instagram (${socials.ig}) linked, schema sameAs ok`) : fail(vp.name, 'social', JSON.stringify(socials));
@@ -241,13 +248,13 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
     await ctx.close();
   }
 
-  for (const scenario of ['success', 'failure']) {
+  for (const scenario of ['success', 'failure', 'nokey']) {
     const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
     const page = await ctx.newPage();
     const errs = []; let sent = null;
     page.on('pageerror', e => errs.push(e.message));
     await page.route(URL, async route => {
-      const res = await route.fetch(); const html = (await res.text()).replace('data-web3forms-key=""', 'data-web3forms-key="TEST-KEY"');
+      const res = await route.fetch(); const html = (await res.text()).replace(/data-web3forms-key="[^"]*"/, scenario === 'nokey' ? 'data-web3forms-key=""' : 'data-web3forms-key="TEST-KEY"');
       route.fulfill({ response: res, body: html, headers: { ...res.headers(), 'content-type': 'text/html; charset=utf-8' } });
     });
     await page.route('https://api.web3forms.com/submit', async route => {
@@ -262,6 +269,15 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
     await page.fill('#name', 'Email Tester'); await page.fill('#phone', '3025550100');
     await page.evaluate(() => { document.getElementById('date').value = document.getElementById('date').min; });
     await page.selectOption('#method', 'Delivery'); await page.fill('#addr', '9 Rose Ln'); await page.fill('#topper', 'Happy Retirement');
+    if (scenario === 'nokey') {
+      const link = await page.evaluate(() => { document.getElementById('orderForm').requestSubmit(); return document.getElementById('orderForm').dataset.lastLink || ''; });
+      label === 'Text My Order' && !sent && /^sms:\+13023575065/.test(link)
+        ? pass('email-nokey', 'form', 'Without a key: "Text My Order" opens a text, nothing sent to Web3Forms')
+        : fail('email-nokey', 'form', `label=${label} sent=${!!sent} link=${link.slice(0, 40)}`);
+      errs.length ? fail('email-nokey', 'console', errs.join('; ')) : pass('email-nokey', 'console', 'No JS errors');
+      await ctx.close();
+      continue;
+    }
     await page.click('#sendBtn');
     const busy = await page.getAttribute('#sendBtn', 'aria-busy');
     await page.waitForFunction(() => document.getElementById('orderForm').dataset.sent);
