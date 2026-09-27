@@ -1,0 +1,14 @@
+# Client source media (originals stay local; web-ready copies live in site/assets)
+/*.mp4
+/*.jpeg
+/*.jpg
+/*.png
+/instagram/
+
+# Test tooling output
+qa/node_modules/
+qa/shots/
+qa/result.txt
+
+# Local editor / agent settings
+.claude/

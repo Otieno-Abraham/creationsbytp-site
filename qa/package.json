@@ -1,0 +1,11 @@
+{
+  "name": "creationsbytp-qa",
+  "private": true,
+  "scripts": {
+    "test": "node e2e.test.js"
+  },
+  "dependencies": {
+    "axe-core": "4.13.0",
+    "playwright-core": "1.63.0"
+  }
+}

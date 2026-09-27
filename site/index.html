@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creations by TP | Custom Money Bouquets, Pickup &amp; Delivery</title>
+<meta name="description" content="Handmade custom money bouquets, burn bouquets, bottle bouquets and diaper bouquets by Tanesha at Creations by TP. One all-inclusive price, the cash included. Pickup and delivery available.">
+<meta name="theme-color" content="#0b0909">
+<link rel="canonical" href="https://creationsbytp.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creationsbytp.com/">
+<meta property="og:title" content="Creations by TP | Custom Money Bouquets">
+<meta property="og:description" content="Handmade money, rose, burn, bottle and diaper bouquets. The cash is included. Order yours today.">
+<meta property="og:image" content="https://creationsbytp.com/assets/large.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/video1.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Creations by TP",
+  "url": "https://creationsbytp.com/",
+  "founder": { "@type": "Person", "name": "Tanesha Pinkney" },
+  "description": "Custom money bouquets, burn bouquets, bottle bouquets and diaper bouquets. Pickup and delivery available.",
+  "telephone": "+1-302-357-5065",
+  "image": "https://creationsbytp.com/assets/large.jpg",
+  "logo": "https://creationsbytp.com/assets/logo-main.jpg",
+  "sameAs": ["https://www.instagram.com/creationsby_tp/", "https://www.tiktok.com/@taneshap1105"],
+  "priceRange": "$70-$350",
+  "paymentAccepted": "Apple Pay, Zelle",
+  "makesOffer": [
+    { "@type": "Offer", "name": "X-Small Money Bouquet (25 x $1)", "price": "150", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Small Money Bouquet (50 x $1)", "price": "250", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Medium Money Bouquet (75 x $1)", "price": "275", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Large Money Bouquet (100 x $1 + LED)", "price": "350", "priceCurrency": "USD" }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #0b0909;
+    --bg-2: #141011;
+    --surface: #1b1516;
+    --surface-2: #231b1c;
+    --gold: #d9b26a;
+    --gold-hi: #f6dfa4;
+    --gold-lo: #a97d3a;
+    --pink: #f3a9c2;
+    --ruby: #c8203c;
+    --text: #f7f0ea;
+    --muted: #c4b6ae;
+    --line: rgba(217, 178, 106, .26);
+    --line-soft: rgba(217, 178, 106, .14);
+    --radius: 20px;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+    --gold-grad: linear-gradient(100deg, var(--gold-lo) 0%, var(--gold) 22%, var(--gold-hi) 48%, var(--gold) 72%, var(--gold-lo) 100%);
+    --z-nav: 40; --z-bar: 50;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 400 16px/1.65 "Montserrat", system-ui, sans-serif;
+    overflow-x: clip;
+  }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  :focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: 16px; top: -80px; z-index: 200; padding: 14px 18px; border-radius: 10px; background: var(--gold); color: #1a1410; font-weight: 600; text-decoration: none; transition: top .2s; }
+  .skip:focus { top: 12px; }
+
+  /* Gold gradient text. Padding + matching negative margin lets the gradient
+     cover script swashes and descenders that spill outside the glyph box. */
+  .gt {
+    display: inline-block;
+    padding: .25em .5em .32em; margin: -.25em -.5em -.32em;
+    background: var(--gold-grad); background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    animation: sheen 9s linear infinite;
+  }
+  @keyframes sheen { to { background-position: -200% 0; } }
+  .script { font-family: "Great Vibes", cursive; font-weight: 400; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 0 28px; border-radius: 999px;
+    font: 600 13px/1 "Montserrat", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent; touch-action: manipulation;
+    transition: transform .2s var(--ease), box-shadow .25s var(--ease), background-color .2s, color .2s;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-gold { background: linear-gradient(135deg, var(--gold-hi), var(--gold) 55%, var(--gold-lo)); color: #1a1208; box-shadow: 0 10px 30px rgba(217, 178, 106, .28); }
+  .btn-gold:hover { box-shadow: 0 14px 40px rgba(217, 178, 106, .45); transform: translateY(-2px); }
+  .btn-ghost { border-color: rgba(243, 169, 194, .6); color: var(--pink); background: rgba(243, 169, 194, .04); }
+  .btn-ghost:hover { background: rgba(243, 169, 194, .12); transform: translateY(-2px); }
+  .ico { width: 22px; height: 22px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .btn .ico { width: 18px; height: 18px; }
+
+  /* Nav */
+  .nav { position: sticky; top: 0; z-index: var(--z-nav); background: rgba(11, 9, 9, .8); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border-bottom: 1px solid var(--line-soft); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-height: 48px; }
+  .brand img { width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); object-fit: cover; }
+  .brand .script { font-size: 30px; line-height: 1.2; }
+  .nav-links { display: flex; gap: 4px; list-style: none; }
+  .nav-links a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current="true"] { color: var(--gold-hi); }
+
+  /* Hero */
+  .hero { position: relative; isolation: isolate; padding: 72px 0 96px; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -20% -10% auto; height: 140%; z-index: -2;
+    background:
+      radial-gradient(40% 50% at 18% 20%, rgba(200, 32, 60, .22), transparent 70%),
+      radial-gradient(40% 45% at 85% 30%, rgba(217, 178, 106, .18), transparent 70%),
+      radial-gradient(50% 40% at 60% 95%, rgba(243, 169, 194, .12), transparent 70%);
+  }
+  #sparkles { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--pink); background: rgba(243, 169, 194, .05); }
+  .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ruby); box-shadow: 0 0 0 4px rgba(200, 32, 60, .25); }
+  .hero h1 { margin: 22px 0 6px; font-size: clamp(58px, 5.9vw, 92px); line-height: 1.15; white-space: nowrap; }
+  .hero .tagline { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.3; }
+  .hero .tagline em { color: var(--pink); }
+  .hero .lead { max-width: 520px; margin: 18px 0 30px; color: var(--muted); font-size: 17px; }
+  .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 34px; list-style: none; color: var(--muted); font-size: 14px; }
+  .trust li { display: flex; align-items: center; gap: 8px; }
+  .trust .ico { color: var(--gold); width: 20px; height: 20px; }
+
+  .showcase { position: relative; height: 600px; }
+  .arch {
+    position: absolute; inset: 0 12%; border-radius: 999px 999px 28px 28px; overflow: hidden;
+    border: 1px solid var(--line); box-shadow: 0 40px 80px rgba(0, 0, 0, .55), 0 0 0 10px rgba(217, 178, 106, .05);
+    background: #000;
+  }
+  .arch video { width: 100%; height: 100%; object-fit: cover; }
+  .arch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(11, 9, 9, .55)); pointer-events: none; }
+  .float { position: absolute; border-radius: 18px; overflow: hidden; border: 3px solid #f4ece4; box-shadow: 0 24px 50px rgba(0, 0, 0, .5); animation: bob 7s ease-in-out infinite; }
+  .float img { width: 100%; height: 100%; object-fit: cover; }
+  .float.f1 { width: 34%; aspect-ratio: 4/5; left: 0; bottom: 8%; rotate: -7deg; }
+  .float.f2 { width: 30%; aspect-ratio: 4/5; right: 0; top: 8%; rotate: 6deg; animation-delay: -3.5s; }
+  @keyframes bob { 50% { translate: 0 -12px; } }
+  .chip {
+    position: absolute; right: 4%; bottom: 10%; padding: 14px 20px; border-radius: 18px;
+    background: rgba(20, 16, 17, .85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--line); box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+  }
+  .chip small { display: block; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .chip strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 34px; line-height: 1.2; font-weight: 700; }
+  .chip .incl { display: block; font-size: 12px; color: var(--pink); }
+
+  /* Occasion marquee */
+  .marquee { border-block: 1px solid var(--line-soft); background: var(--bg-2); overflow: hidden; }
+  .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+  .marquee ul { display: flex; list-style: none; }
+  .marquee li { display: flex; align-items: center; gap: 28px; padding: 18px 14px; white-space: nowrap; font-family: "Cormorant Garamond", serif; font-size: 22px; font-style: italic; color: var(--muted); }
+  .marquee li::after { content: ""; width: 7px; height: 7px; transform: rotate(45deg); background: var(--gold); opacity: .8; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* Sections */
+  section { padding: 96px 0; scroll-margin-top: 68px; }
+  .alt { background: var(--bg-2); border-block: 1px solid var(--line-soft); }
+  .sec-head { text-align: center; margin-bottom: 52px; }
+  .sec-head h2 { font-size: clamp(48px, 7vw, 72px); line-height: 1.25; }
+  .kicker { display: block; margin-top: 6px; font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--pink); }
+  .flourish { display: block; width: 150px; height: 18px; margin: 16px auto 0; color: var(--gold); fill: none; stroke: currentColor; }
+
+  /* Price cards */
+  .sizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .size {
+    position: relative; display: flex; flex-direction: column; overflow: hidden;
+    background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line-soft); border-radius: var(--radius);
+    transition: transform .35s var(--ease), border-color .35s, box-shadow .35s;
+  }
+  .size:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 30px 60px rgba(0, 0, 0, .45), 0 0 40px rgba(217, 178, 106, .12); }
+  .size .ph { aspect-ratio: 4/5; overflow: hidden; }
+  .size .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+  .size:hover .ph img { transform: scale(1.06); }
+  .size .body { display: flex; flex-direction: column; flex: 1; padding: 22px 20px 24px; text-align: center; }
+  .size h3 { font-family: "Cormorant Garamond", serif; font-size: 28px; font-weight: 700; line-height: 1.2; }
+  .size .bills { color: var(--muted); font-size: 14px; }
+  .size .price { margin: 12px 0 2px; font-family: "Cormorant Garamond", serif; font-size: 50px; font-weight: 700; line-height: 1.2; font-variant-numeric: lining-nums tabular-nums; }
+  .size .incl { margin-bottom: 18px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--pink); }
+  .size .btn { margin-top: auto; width: 100%; }
+  .size.popular { border-color: rgba(217, 178, 106, .6); }
+  .ribbon { position: absolute; top: 14px; left: 50%; translate: -50% 0; z-index: 2; white-space: nowrap; padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #1a1208; background: linear-gradient(135deg, var(--gold-hi), var(--gold)); box-shadow: 0 8px 20px rgba(0, 0, 0, .35); }
+
+  .inc-title { margin-top: 60px; text-align: center; font-family: "Cormorant Garamond", serif; font-size: 30px; font-weight: 600; line-height: 1.3; }
+  .inc-title em { color: var(--pink); }
+  .included { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 24px; list-style: none; }
+  .included li { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 12px; text-align: center; border: 1px solid var(--line-soft); border-radius: 16px; background: rgba(255, 255, 255, .015); font-size: 14px; color: var(--muted); }
+  .included .ico { width: 28px; height: 28px; color: var(--gold); }
+  .included strong { display: block; color: var(--text); font-weight: 600; }
+
+  .more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 64px; }
+  .card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface); transition: transform .35s var(--ease), border-color .35s; }
+  .card:hover { transform: translateY(-6px); border-color: var(--line); }
+  .card .ph { aspect-ratio: 16/11; overflow: hidden; position: relative; }
+  .card .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .card .ph .tag { position: absolute; left: 14px; top: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; background: rgba(11, 9, 9, .78); color: var(--gold-hi); }
+  .card .ph .tag .ico { width: 14px; height: 14px; }
+  .card .body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+  .card h3 { font-family: "Cormorant Garamond", serif; font-size: 28px; line-height: 1.2; margin-bottom: 10px; }
+  .card ul { list-style: none; font-size: 15px; color: var(--muted); }
+  .card li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--line-soft); }
+  .card li:last-child { border-bottom: 0; }
+  .card li b { color: var(--gold-hi); font-weight: 600; white-space: nowrap; }
+  .card .note { margin-top: 12px; font-size: 13px; color: var(--pink); }
+  .burn-art { width: 100%; height: 100%; display: grid; place-items: center; background: radial-gradient(60% 60% at 50% 60%, rgba(200, 32, 60, .55), transparent 70%), radial-gradient(50% 50% at 50% 40%, rgba(246, 223, 164, .25), transparent 70%), #1a0c0e; }
+  .burn-art .script { font-size: 56px; line-height: 1.3; }
+
+  /* Gallery */
+  .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+  .filters button { min-height: 44px; min-width: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: background-color .2s, color .2s; }
+  .filters button[aria-pressed="true"] { background: var(--gold); color: #1a1208; border-color: var(--gold); font-weight: 600; }
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 16px; }
+  .gallery > .g-item { aspect-ratio: 3/4; }
+  .gallery > .g-item:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+  .g-item { position: relative; display: block; width: 100%; height: 100%; margin: 0; padding: 0; border: 1px solid var(--line-soft); border-radius: 18px; overflow: hidden; background: #000; cursor: pointer; break-inside: avoid; transition: transform .3s var(--ease), border-color .3s; }
+  .g-item:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .g-item img, .g-item video { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+  .g-item:hover img, .g-item:hover video { transform: scale(1.04); }
+  .g-item .snd { position: absolute; top: 12px; right: 12px; z-index: 1; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-hi); background: rgba(11, 9, 9, .65); border: 1px solid rgba(246, 223, 164, .35); }
+  .g-item .snd svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .g-item.has-play::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .6)); pointer-events: none; }
+  .g-item .cap { position: absolute; left: 14px; bottom: 12px; right: 14px; text-align: left; font-size: 13px; font-weight: 500; color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .9); }
+  .g-item:not(.has-play) { background: #000; }
+  .g-item:not(.has-play)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .6)); }
+  .g-item .cap { z-index: 1; }
+  .g-item[hidden] { display: none; }
+  .ig-cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+  dialog#lightbox { margin: auto; padding: 0; border: 0; background: transparent; color: var(--text); max-width: min(92vw, 520px); overflow: visible; }
+  dialog#lightbox::backdrop { background: rgba(5, 4, 4, .9); }
+  dialog#lightbox[open] { animation: pop .3s var(--ease); }
+  @keyframes pop { from { opacity: 0; transform: scale(.94); } }
+  .lb-media { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+  .lb-media video, .lb-media img { max-height: 78vh; width: auto; margin: auto; }
+  .lb-close { position: absolute; top: -58px; right: 0; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: rgba(11, 9, 9, .85); cursor: pointer; display: grid; place-items: center; }
+  .lb-close svg { width: 20px; height: 20px; stroke: var(--text); stroke-width: 2; }
+  .lb-cap { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 12px; text-align: center; color: var(--muted); font-size: 14px; }
+  .lb-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; color: var(--pink); font-weight: 600; }
+
+  /* Steps */
+  .steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; list-style: none; }
+  .steps::before { content: ""; position: absolute; top: 32px; left: 12%; right: 12%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .step { position: relative; text-align: center; padding: 0 8px; }
+  .step .n { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--bg-2); border: 1px solid var(--gold); color: var(--gold-hi); }
+  .step .n .ico { width: 26px; height: 26px; }
+  .step h3 { font-family: "Cormorant Garamond", serif; font-size: 25px; line-height: 1.25; margin-bottom: 6px; }
+  .step p { color: var(--muted); font-size: 15px; }
+  .policies { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 50px; list-style: none; }
+  .policies li { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: 1px solid var(--line-soft); border-radius: 999px; font-size: 14px; color: var(--muted); }
+  .policies b { color: var(--pink); font-weight: 600; }
+  .policies .ico { width: 18px; height: 18px; color: var(--gold); }
+
+  /* Order */
+  .order-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: start; }
+  .panel { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line-soft); border-radius: 24px; padding: 32px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 18px; }
+  label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .req { color: var(--pink); }
+  input, select, textarea { width: 100%; min-height: 50px; padding: 12px 14px; border-radius: 12px; background: #110d0e; color: var(--text); border: 1px solid rgba(217, 178, 106, .3); font: 400 16px "Montserrat", sans-serif; transition: border-color .2s, box-shadow .2s; }
+  input::placeholder, textarea::placeholder { color: #9a8d86; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(217, 178, 106, .2); }
+  input[aria-invalid="true"] { border-color: #ff7a93; box-shadow: 0 0 0 3px rgba(255, 122, 147, .15); }
+  .err { display: none; margin-top: 6px; font-size: 13px; color: #ffa3b5; }
+  input[aria-invalid="true"] + .err { display: block; }
+  textarea { min-height: 100px; resize: vertical; }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d9b26a' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+  select option { background: #110d0e; color: var(--text); }
+  input[type="date"] { color-scheme: dark; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+  .toast { display: none; margin-top: 16px; padding: 14px 16px; border-radius: 12px; font-size: 14px; background: rgba(217, 178, 106, .12); color: var(--gold-hi); border: 1px solid var(--line); }
+  .toast.show { display: block; }
+  .toast.ok { background: rgba(120, 200, 150, .1); color: #c9f1d6; border-color: rgba(120, 200, 150, .35); }
+  .toast strong { display: block; font-size: 16px; margin-bottom: 2px; }
+  .toast .t-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 6px; color: var(--gold-hi); font-weight: 600; }
+  .hp { display: none !important; }
+  .btn[aria-busy="true"] { opacity: .7; cursor: progress; }
+  .btn[aria-busy="true"] .ico { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .toast.bad { background: rgba(255, 122, 147, .1); color: #ffc2cd; border-color: rgba(255, 122, 147, .35); }
+  .hint { margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+  .contact h3 { font-family: "Cormorant Garamond", serif; font-size: 32px; line-height: 1.2; }
+  .contact .sub { margin: 4px 0 18px; color: var(--muted); font-size: 15px; }
+  .c-line { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); text-decoration: none; transition: color .2s; }
+  .c-line:hover { color: var(--gold-hi); }
+  .c-line .ic { width: 46px; height: 46px; flex: none; border-radius: 50%; display: grid; place-items: center; background: rgba(243, 169, 194, .1); color: var(--pink); }
+  .c-line small { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .c-line .v { font-weight: 500; }
+  .pay { margin-top: 22px; padding: 18px; border-radius: 16px; background: rgba(217, 178, 106, .06); border: 1px solid var(--line-soft); }
+  .pay h4 { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi); margin-bottom: 10px; }
+  .pay-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .pay-row span { padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; background: var(--bg); border: 1px solid var(--line); }
+  .pay p { font-size: 14px; color: var(--muted); }
+  .pay p b { color: var(--text); }
+  .privacy { display: flex; gap: 10px; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .privacy .ico { width: 18px; height: 18px; color: var(--gold); margin-top: 2px; }
+
+  /* FAQ */
+  .faq { max-width: 800px; margin: 0 auto; }
+  .faq details { border-bottom: 1px solid var(--line-soft); }
+  .faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; padding: 14px 4px; cursor: pointer; list-style: none; font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 600; line-height: 1.3; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: ""; flex: none; width: 11px; height: 11px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg) translateY(-3px); transition: transform .25s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(225deg) translateY(-3px); }
+  .faq details p { padding: 0 4px 20px; color: var(--muted); }
+
+  /* Final CTA */
+  .final { position: relative; isolation: isolate; overflow: hidden; text-align: center; }
+  .final::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 70% at 50% 100%, rgba(200, 32, 60, .25), transparent 70%), radial-gradient(40% 60% at 50% 0%, rgba(217, 178, 106, .15), transparent 70%); }
+  .final h2 { font-size: clamp(52px, 8vw, 88px); line-height: 1.25; }
+  .final p { max-width: 520px; margin: 10px auto 30px; color: var(--muted); font-size: 17px; }
+  .final .ctas { justify-content: center; }
+
+  footer { padding: 44px 0 110px; text-align: center; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line-soft); }
+  footer .logo-f { width: 72px; height: 72px; margin: 0 auto 10px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); }
+  footer .script { font-size: 40px; line-height: 1.4; }
+  footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  footer nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 0 12px; text-decoration: none; }
+  footer nav a:hover { color: var(--gold-hi); }
+
+  .mbar { display: none; }
+
+  /* Scroll reveal (only when JS is running) */
+  .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero .lead { margin-inline: auto; }
+    .ctas, .trust { justify-content: center; }
+    .showcase { height: 540px; max-width: 520px; width: 100%; margin: 0 auto; }
+    .hero h1 { font-size: clamp(56px, 11vw, 96px); }
+    .sizes { grid-template-columns: repeat(2, 1fr); }
+    .included { grid-template-columns: repeat(3, 1fr); }
+    .more { grid-template-columns: 1fr 1fr; }
+    .more .card:last-child { grid-column: 1 / -1; }
+    .order-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .steps::before { display: none; }
+  }
+  @media (max-width: 720px) {
+    .nav-links, .nav .btn { display: none; }
+    .nav .wrap { justify-content: center; }
+    section { padding: 72px 0; }
+    .hero { padding: 40px 0 64px; }
+    .showcase { height: 440px; }
+    .arch { inset: 0 10%; }
+    .chip { right: 0; bottom: 4%; padding: 10px 14px; }
+    .chip strong { font-size: 28px; }
+    .included { grid-template-columns: 1fr 1fr; }
+    .included li:last-child { grid-column: 1 / -1; }
+    .more { grid-template-columns: 1fr; }
+    .more .card:last-child { grid-column: auto; }
+    .row { grid-template-columns: 1fr; gap: 0; }
+    .panel { padding: 22px; }
+    .actions .btn { width: 100%; }
+    .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mbar {
+      display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-bar);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(11, 9, 9, .95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line-soft);
+      transform: translateY(110%); transition: transform .35s var(--ease);
+    }
+    .mbar.show { transform: none; }
+    .mbar .btn { flex: 1; padding: 0 10px; font-size: 12px; }
+  }
+  @media (max-width: 440px) {
+    .hero h1 { white-space: normal; }
+    .sizes { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 10v4M18 10v4"/></symbol>
+  <symbol id="i-rose" viewBox="0 0 24 24"><path d="M12 13c-3 0-5-2-5-5 2 0 3 .5 4 1.5C11 7 12 5 12 3c0 2 1 4 1 6.5 1-1 2-1.5 4-1.5 0 3-2 5-5 5Z"/><path d="M12 13v8M12 17c-2 0-3.5-1-4-2.5M12 18c1.8 0 3-.8 3.5-2"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18M12 8S10 3 7.5 4 9 8 12 8Zm0 0s2-5 4.5-4S15 8 12 8Z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.2 1 2V16h5v-.1c0-.8.4-1.6 1-2A6 6 0 0 0 12 3Z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.7 7-6.5 0-4-3-6-4-9.5-1.5 2-2 3.5-2 5-1-1-2-2.5-2-4.5C7 9 5 12 5 15.5 5 19.3 8 22 12 22Z"/></symbol>
+  <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2h4v4l1.5 2.5c.3.5.5 1 .5 1.6V21a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V10.1c0-.6.2-1.1.5-1.6L10 6V2Z"/><path d="M8 13h8"/></symbol>
+  <symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M10 9h.01M14 9h.01M10.5 11.5c.8.6 2.2.6 3 0M6 21c.5-3 3-5 6-5s5.5 2 6 5"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.5 5 5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13 7 4 4"/></symbol>
+  <symbol id="i-flourish" viewBox="0 0 150 18"><path d="M2 9h52M96 9h52" stroke-width="1"/><path d="M75 2c-6 0-9 7-15 7 6 0 9 7 15 7s9-7 15-7c-6 0-9-7-15-7Z" stroke-width="1"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#main" class="brand" aria-label="Creations by TP, back to top">
+      <img src="assets/logo-main.webp" alt="" width="44" height="44">
+      <span class="script gt" aria-hidden="true">Creations by TP</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#bouquets">Bouquets</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#how">How to Order</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-gold">Order Now</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="sparkles" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="dot"></span>Handmade to order</span>
+        <h1 id="hero-title" class="script"><span class="gt">Creations by TP</span></h1>
+        <p class="tagline">Custom money bouquets that make them <em>gasp.</em></p>
+        <p class="lead">Real cash, glittering roses and your own custom message, wrapped by hand by Tanesha for birthdays, Valentine's, graduations, baby showers and every moment worth celebrating.</p>
+        <div class="ctas" id="heroCtas">
+          <a href="#order" class="btn btn-gold"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg>Order Your Bouquet</a>
+          <a href="#bouquets" class="btn btn-ghost">See Prices</a>
+        </div>
+        <ul class="trust">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cash"/></svg>Cash included</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg>Custom toppers</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg>Pickup &amp; delivery</li>
+        </ul>
+      </div>
+
+      <div class="showcase reveal" aria-hidden="true">
+        <div class="arch">
+          <video id="heroVid" src="assets/video1.mp4" poster="assets/video1.webp" muted loop playsinline preload="metadata" tabindex="-1"></video>
+        </div>
+        <div class="float f1"><img src="assets/large.webp" alt="" width="967" height="1000"></div>
+        <div class="float f2"><img src="assets/small.webp" alt="" width="885" height="1000"></div>
+        <div class="chip">
+          <small>Money bouquets from</small>
+          <strong><span class="gt">$150</span></strong>
+          <span class="incl">cash &amp; everything included</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" role="region" aria-label="Occasions we create for">
+    <div class="marquee-track">
+      <ul><li>Birthdays</li><li>Valentine's Day</li><li>Mother's Day</li><li>Graduations</li><li>Baby Showers</li><li>Retirements</li><li>Anniversaries</li><li>Just Because</li></ul>
+      <ul aria-hidden="true"><li>Birthdays</li><li>Valentine's Day</li><li>Mother's Day</li><li>Graduations</li><li>Baby Showers</li><li>Retirements</li><li>Anniversaries</li><li>Just Because</li></ul>
+    </div>
+  </div>
+
+  <section id="bouquets" class="alt" aria-labelledby="bq-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="bq-title" class="script"><span class="gt">Money Bouquets</span></h2>
+        <span class="kicker">One price. Cash included.</span>
+        <svg class="flourish" aria-hidden="true"><use href="#i-flourish"/></svg>
+      </div>
+
+      <div class="sizes">
+        <article class="size reveal">
+          <div class="ph"><img src="assets/xsmall.webp" alt="X-Small pink glitter money bouquet with a Happy Valentine's Day topper" width="750" height="1000" loading="lazy"></div>
+          <div class="body">
+            <h3>X-Small</h3>
+            <div class="bills">25 × $1 bills</div>
+            <div class="price"><span class="gt">$150</span></div>
+            <div class="incl">Total · all inclusive</div>
+            <a href="#order" class="btn btn-ghost" data-size="X-Small (25 x $1) - $150">Order X-Small</a>
+          </div>
+        </article>
+        <article class="size reveal">
+          <div class="ph"><img src="assets/small.webp" alt="Small money bouquet with pink roses and a Happy Birthday ribbon" width="885" height="1000" loading="lazy"></div>
+          <div class="body">
+            <h3>Small</h3>
+            <div class="bills">50 × $1 bills</div>
+            <div class="price"><span class="gt">$250</span></div>
+            <div class="incl">Total · all inclusive</div>
+            <a href="#order" class="btn btn-ghost" data-size="Small (50 x $1) - $250">Order Small</a>
+          </div>
+        </article>
+        <article class="size popular reveal">
+          <span class="ribbon">Most Popular</span>
+          <div class="ph"><img src="assets/medium.webp" alt="Medium money bouquet with red roses and a Just Because topper" width="749" height="1000" loading="lazy"></div>
+          <div class="body">
+            <h3>Medium</h3>
+            <div class="bills">75 × $1 bills</div>
+            <div class="price"><span class="gt">$275</span></div>
+            <div class="incl">Total · all inclusive</div>
+            <a href="#order" class="btn btn-gold" data-size="Medium (75 x $1) - $275">Order Medium</a>
+          </div>
+        </article>
+        <article class="size reveal">
+          <div class="ph"><img src="assets/large.webp" alt="Large money bouquet with 100 one-dollar bills, roses, butterflies and a From Kysha ribbon" width="967" height="1000" loading="lazy"></div>
+          <div class="body">
+            <h3>Large</h3>
+            <div class="bills">100 × $1 bills + LED lights</div>
+            <div class="price"><span class="gt">$350</span></div>
+            <div class="incl">Total · all inclusive</div>
+            <a href="#order" class="btn btn-ghost" data-size="Large (100 x $1 + LED) - $350">Order Large</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="inc-title reveal">Every money bouquet includes <em>everything</em></p>
+      <ul class="included reveal">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-cash"/></svg><strong>The cash</strong>Crisp $1 bills</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-rose"/></svg><strong>Artificial roses</strong>Glitter &amp; classic</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><strong>Custom topper</strong>Or name ribbon</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg><strong>Luxe wrapping</strong>Plus butterflies</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-bulb"/></svg><strong>LED lights</strong>On the Large</li>
+      </ul>
+
+      <div class="more">
+        <article class="card reveal">
+          <div class="ph">
+            <img style="object-position: 50% 58%" src="assets/ig-burn.webp" alt="Burn Away bouquet: a heart burning away to reveal Will You Be My Valentine, surrounded by white roses" width="361" height="640" loading="lazy">
+            <span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg>Burn</span>
+          </div>
+          <div class="body">
+            <h3>Burn Bouquets</h3>
+            <ul>
+              <li>Burn Away Bouquet <b>from $75</b></li>
+              <li>Add-ons <b>extra</b></li>
+            </ul>
+            <p class="note">Burn the top layer to reveal a hidden message.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="ph">
+            <img src="assets/video5.webp" alt="Bottle bouquet with money petals, Ferrero Rocher chocolates and a palm tree topper" width="600" height="1066" loading="lazy">
+            <span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-bottle"/></svg>Bottle</span>
+          </div>
+          <div class="body">
+            <h3>Wine &amp; Liquor Bouquets</h3>
+            <ul>
+              <li>25 × $1 bills <b>$70</b></li>
+              <li>50 × $1 bills <b>$120</b></li>
+              <li>Chocolates &amp; LED lights <b>Ask</b></li>
+            </ul>
+            <p class="note">Bottle not included.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="ph">
+            <img src="assets/diaper.webp" alt="Pink Baby Girl diaper bouquet with shampoo, lotion and baby blocks" width="750" height="1000" loading="lazy">
+            <span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg>Baby</span>
+          </div>
+          <div class="body">
+            <h3>Diaper Bouquets</h3>
+            <ul>
+              <li>Small · 20–35 diapers <b>Ask</b></li>
+              <li>Medium · 40–55 diapers <b>Ask</b></li>
+              <li>Large · 60–85 diapers <b>Ask</b></li>
+            </ul>
+            <p class="note">Includes baby essentials valued up to $30.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" aria-labelledby="gal-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="gal-title" class="script"><span class="gt">See Them Shine</span></h2>
+        <span class="kicker">Recent creations</span>
+        <svg class="flourish" aria-hidden="true"><use href="#i-flourish"/></svg>
+      </div>
+      <div class="filters" role="group" aria-label="Filter gallery">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="Money" aria-pressed="false">Money</button>
+        <button type="button" data-filter="Roses" aria-pressed="false">Roses</button>
+        <button type="button" data-filter="Burn" aria-pressed="false">Burn</button>
+        <button type="button" data-filter="Bottle" aria-pressed="false">Bottle</button>
+        <button type="button" data-filter="Baby" aria-pressed="false">Baby</button>
+      </div>
+      <div class="gallery" id="galleryGrid"></div>
+      <div class="ig-cta"><a class="btn btn-ghost" href="https://www.instagram.com/creationsby_tp/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a><a class="btn btn-ghost" href="https://www.tiktok.com/@taneshap1105" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</a></div>
+    </div>
+  </section>
+
+  <section id="how" class="alt" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="how-title" class="script"><span class="gt">How to Order</span></h2>
+        <span class="kicker">Four easy steps</span>
+        <svg class="flourish" aria-hidden="true"><use href="#i-flourish"/></svg>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><div class="n"><svg class="ico" aria-hidden="true"><use href="#i-rose"/></svg></div><h3>Pick your bouquet</h3><p>Choose a size, colors and the occasion.</p></li>
+        <li class="step reveal"><div class="n"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></div><h3>Send your request</h3><p>Use the order form below or DM on Instagram.</p></li>
+        <li class="step reveal"><div class="n"><svg class="ico" aria-hidden="true"><use href="#i-card"/></svg></div><h3>Pay 50% deposit</h3><p>Your date is locked in once the deposit is received.</p></li>
+        <li class="step reveal"><div class="n"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></div><h3>Pickup or delivery</h3><p>Pay the balance, then pick up or have it delivered.</p></li>
+      </ol>
+      <ul class="policies reveal">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg><b>50%</b> non-refundable deposit</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><b>3–5 days</b> notice</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg>Rush orders <b>+$35</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>All sales <b>final</b></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><b>Pickup &amp; delivery</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="order" aria-labelledby="order-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="order-title" class="script"><span class="gt">Place Your Order</span></h2>
+        <span class="kicker">Tell us what you're dreaming of</span>
+        <svg class="flourish" aria-hidden="true"><use href="#i-flourish"/></svg>
+      </div>
+      <div class="order-grid">
+        <!-- Paste the Web3Forms access key (made with Tanesha's email at web3forms.com) into data-web3forms-key.
+             Empty = orders are sent by text message only. -->
+        <form class="panel reveal" id="orderForm" novalidate aria-label="Order request" data-web3forms-key="">
+          <div class="row">
+            <div class="field"><label for="name">Your name <span class="req" aria-hidden="true">*</span></label><input id="name" required autocomplete="name" aria-describedby="name-err"><div class="err" id="name-err">Please add your name.</div></div>
+            <div class="field"><label for="phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="phone" type="tel" inputmode="tel" required autocomplete="tel" aria-describedby="phone-err"><div class="err" id="phone-err">Please add a phone number so Tanesha can reach you.</div></div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="type">Bouquet</label>
+              <select id="type">
+                <option>X-Small (25 x $1) - $150</option>
+                <option>Small (50 x $1) - $250</option>
+                <option selected>Medium (75 x $1) - $275</option>
+                <option>Large (100 x $1 + LED) - $350</option>
+                <option>Burn Bouquet - from $75</option>
+                <option>Wine/Liquor Bouquet (25 x $1) - $70</option>
+                <option>Wine/Liquor Bouquet (50 x $1) - $120</option>
+                <option>Diaper Bouquet</option>
+                <option>Something custom</option>
+              </select>
+            </div>
+            <div class="field"><label for="date">Date needed <span class="req" aria-hidden="true">*</span></label><input id="date" type="date" required aria-describedby="date-err"><div class="err" id="date-err">Please pick a date at least 3 days out.</div></div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="occasion">Occasion</label>
+              <select id="occasion">
+                <option>Birthday</option><option>Valentine's Day</option><option>Mother's Day</option>
+                <option>Graduation</option><option>Baby Shower</option><option>Anniversary</option>
+                <option>Retirement</option><option>Just Because</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="colors">Colors</label><input id="colors" placeholder="e.g. pink &amp; gold"></div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="method">Pickup or delivery</label>
+              <select id="method"><option>Pickup</option><option>Delivery</option></select>
+            </div>
+            <div class="field" id="addrField" hidden><label for="addr">Delivery address</label><input id="addr" autocomplete="street-address" placeholder="Street, city, ZIP"></div>
+          </div>
+          <div class="field"><label for="topper">Topper / ribbon text</label><input id="topper" placeholder="e.g. Happy Birthday Nyliere"></div>
+          <div class="field"><label for="notes">Anything else?</label><textarea id="notes" placeholder="Butterflies, LED lights, special requests..."></textarea></div>
+          <input type="checkbox" name="botcheck" id="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="actions">
+            <button type="submit" class="btn btn-gold" id="sendBtn"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span id="sendLabel">Text My Order</span></button>
+            <button type="button" class="btn btn-ghost" id="dmBtn"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Copy &amp; DM on Instagram</button>
+          </div>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+          <p class="hint">Your order goes straight to Tanesha. She'll confirm availability and send deposit details by Apple Pay or Zelle.</p>
+        </form>
+
+        <aside class="panel contact reveal" aria-labelledby="contact-title">
+          <h3 id="contact-title">Contact Tanesha</h3>
+          <p class="sub">Questions, custom ideas or rush orders? Reach out anytime.</p>
+          <a class="c-line" href="sms:+13023575065">
+            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span>
+            <span><small>Call or text</small><span class="v">(302) 357-5065</span></span>
+          </a>
+          <a class="c-line" href="https://www.instagram.com/creationsby_tp/" target="_blank" rel="noopener">
+            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></span>
+            <span><small>Instagram DM</small><span class="v">@creationsby_tp</span></span>
+          </a>
+          <a class="c-line" href="https://www.instagram.com/misstlp_45/" target="_blank" rel="noopener">
+            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></span>
+            <span><small>Meet the creator</small><span class="v">@misstlp_45</span></span>
+          </a>
+          <a class="c-line" href="https://www.tiktok.com/@taneshap1105" target="_blank" rel="noopener">
+            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg></span>
+            <span><small>Watch on TikTok</small><span class="v">@taneshap1105</span></span>
+          </a>
+          <div class="pay">
+            <h4>Payments accepted</h4>
+            <div class="pay-row"><span>Apple Pay</span><span>Zelle</span></div>
+            <p>Send to <b>(302) 357-5065</b></p>
+          </div>
+          <p class="privacy"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg><span>Pickup address is shared privately once your order is confirmed.</span></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="faq-title" class="script"><span class="gt">Questions</span></h2>
+        <span class="kicker">Good to know</span>
+        <svg class="flourish" aria-hidden="true"><use href="#i-flourish"/></svg>
+      </div>
+      <div class="faq reveal">
+        <details open><summary>Is the cash included in the price?</summary><p>Yes. Money bouquet prices are the total: the $1 bills, roses, wrapping, butterflies and your custom topper are all included. No hidden extras.</p></details>
+        <details><summary>How far in advance should I order?</summary><p>Please order at least 3–5 days ahead. Need it sooner? Rush orders are available for an extra $35 when the schedule allows.</p></details>
+        <details><summary>How do I secure my order?</summary><p>A 50% non-refundable deposit locks in your date. The balance is due before pickup or delivery. We accept Apple Pay and Zelle.</p></details>
+        <details><summary>Do you deliver?</summary><p>Yes! Both pickup and delivery are available. Choose your option on the order form. For privacy, the pickup address is shared once your order is confirmed.</p></details>
+        <details><summary>Can I customize colors and the topper?</summary><p>Absolutely. Pick your colors, ribbon or topper text, and add touches like butterflies, chocolates or LED lights. Just note it in your order.</p></details>
+        <details><summary>Can I cancel or get a refund?</summary><p>All sales are final and deposits are non-refundable, since every bouquet is handmade just for you.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="final-title">
+    <div class="wrap reveal">
+      <h2 id="final-title" class="script"><span class="gt">Make Their Day</span></h2>
+      <p>Book early for birthdays and holidays. Spots fill fast.</p>
+      <div class="ctas">
+        <a href="#order" class="btn btn-gold"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg>Start My Order</a>
+        <a href="sms:+13023575065" class="btn btn-ghost"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Text Tanesha</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo-f" src="assets/logo-main.webp" alt="Creations by TP logo" width="72" height="72" loading="lazy">
+    <p class="script"><span class="gt">Creations by TP</span></p>
+    <p>Custom money, rose, burn, bottle &amp; diaper bouquets by Tanesha Pinkney</p>
+    <nav aria-label="Footer">
+      <a href="https://www.instagram.com/creationsby_tp/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@taneshap1105" target="_blank" rel="noopener">TikTok</a>
+      <a href="sms:+13023575065">Text us</a>
+      <a href="#order">Order</a>
+    </nav>
+    <p>© <span id="yr"></span> Creations by TP</p>
+  </div>
+</footer>
+
+<nav class="mbar" id="mbar" aria-label="Quick actions">
+  <a href="#order" class="btn btn-gold">Order Now</a>
+  <a href="sms:+13023575065" class="btn btn-ghost">Text Tanesha</a>
+</nav>
+
+<dialog id="lightbox" aria-labelledby="lbCap">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Close preview"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="lb-media" id="lbMedia"></div>
+  <p class="lb-cap" id="lbCap"></p>
+</dialog>
+
+<script>
+  const PHONE = '+13023575065';
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = id => document.getElementById(id);
+  $('yr').textContent = new Date().getFullYear();
+
+  // ---------- Gallery ----------
+  const IG = 'https://www.instagram.com/creationsby_tp/';
+  const GALLERY = [
+    { cat: 'Money', type: 'video', src: 'video1', w: 600, h: 1066, cap: 'Pink glitter Valentine bouquet' },
+    { cat: 'Burn', type: 'img', src: 'ig-burn', w: 361, h: 640, cap: 'Burn Away: "Will You Be My Valentine"', link: IG + 'reel/DTrF5fMDPl5/' },
+    { cat: 'Money', type: 'img', src: 'large', w: 967, h: 1000, cap: 'Large bouquet with name ribbon' },
+    { cat: 'Bottle', type: 'video', src: 'video5', w: 600, h: 1066, cap: 'Bottle bouquet with Ferrero Rocher' },
+    { cat: 'Money', type: 'img', src: 'ig-yellow', w: 361, h: 640, cap: 'Yellow LED retirement bouquet', link: IG + 'reel/DTbUJUliVQh/' },
+    { cat: 'Money', type: 'video', src: 'video2', w: 600, h: 834, cap: 'Birthday money bouquet' },
+    { cat: 'Baby', type: 'video', src: 'video4', w: 600, h: 1066, cap: 'Baby Girl diaper bouquet' },
+    { cat: 'Roses', type: 'img', src: 'ig-purple', w: 512, h: 640, cap: 'Purple rose bouquet', link: IG + 'p/DA81CFHpBQs/' },
+    { cat: 'Money', type: 'video', src: 'video3', w: 600, h: 766, cap: 'LED lit money bouquet' },
+    { cat: 'Money', type: 'img', src: 'ig-butterfly', w: 361, h: 640, cap: 'Pink butterfly LED birthday bouquet', link: IG + 'reel/DQqEC0HDN97/' },
+    { cat: 'Bottle', type: 'video', src: 'video6', w: 600, h: 1066, cap: 'Eagles bottle bouquet with lights' },
+    { cat: 'Baby', type: 'img', src: 'diaper', w: 750, h: 1000, cap: 'Diaper bouquet with essentials' },
+    { cat: 'Money', type: 'img', src: 'ig-nyliere', w: 361, h: 640, cap: '"Happy Birthday Nyliera" hot pink bouquet', link: IG + 'reel/DPeFJ8cEWGE/' },
+  ];
+  const grid = $('galleryGrid');
+  grid.innerHTML = GALLERY.map((g, i) => `
+    <button type="button" class="g-item${g.type === 'video' ? ' has-play' : ''}" data-i="${i}" data-cat="${g.cat}" aria-label="${g.type === 'video' ? 'Watch video with sound' : 'View photo'}: ${g.cap}">
+      ${g.type === 'video'
+        ? `<video src="assets/${g.src}.mp4" poster="assets/${g.src}.webp" width="${g.w}" height="${g.h}" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"></video>
+      <span class="snd" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>Sound</span>`
+        : `<img src="assets/${g.src}.webp" alt="" width="${g.w}" height="${g.h}" loading="lazy">`}
+      <span class="cap" aria-hidden="true">${g.cap}</span>
+    </button>`).join('');
+
+  document.querySelectorAll('[data-filter]').forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    grid.querySelectorAll('.g-item').forEach(el => { el.hidden = f !== 'all' && el.dataset.cat !== f; if (el.hidden) el.querySelector('video')?.pause(); });
+  }));
+
+  const lb = $('lightbox'), lbMedia = $('lbMedia');
+
+  // Gallery videos autoplay muted while on screen; paused when scrolled away, filtered out, or reduced motion is on
+  const tileVids = [...grid.querySelectorAll('video')];
+  if (!reduceMotion) {
+    const vidIO = new IntersectionObserver(entries => entries.forEach(en => {
+      const v = en.target;
+      if (en.isIntersecting && !lb.open) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause();
+    }), { threshold: .35 });
+    tileVids.forEach(v => vidIO.observe(v));
+  }
+
+  // ---------- Lightbox ----------
+  let lastFocus = null;
+  grid.addEventListener('click', e => {
+    const item = e.target.closest('.g-item'); if (!item) return;
+    const g = GALLERY[item.dataset.i];
+    lastFocus = item;
+    lbMedia.innerHTML = g.type === 'video'
+      ? `<video src="assets/${g.src}.mp4" poster="assets/${g.src}.webp" controls autoplay playsinline loop></video>`
+      : `<img src="assets/${g.src}.webp" alt="${g.cap}" width="${g.w}" height="${g.h}">`;
+    $('lbCap').innerHTML = '';
+    $('lbCap').append(g.cap);
+    if (g.link) { const a = document.createElement('a'); a.href = g.link; a.target = '_blank'; a.rel = 'noopener'; a.className = 'lb-link'; a.textContent = 'Watch on Instagram'; $('lbCap').append(a); }
+    tileVids.forEach(v => v.pause());
+    lb.showModal();
+  });
+  $('lbClose').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('close', () => {
+    lbMedia.innerHTML = '';
+    if (lastFocus) lastFocus.focus();
+    if (!reduceMotion) tileVids.forEach(v => { const r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight && !v.closest('[hidden]')) v.play().catch(() => {}); });
+  });
+
+  // ---------- Scroll reveal ----------
+  const revealIO = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); revealIO.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -8% 0px', threshold: .05 });
+  document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; revealIO.observe(el); });
+
+  // ---------- Hero video: play only while visible, never with reduced motion ----------
+  const heroVid = $('heroVid');
+  if (!reduceMotion) new IntersectionObserver(([en]) => en.isIntersecting ? heroVid.play().catch(() => {}) : heroVid.pause()).observe(heroVid);
+
+  // ---------- Active nav link ----------
+  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  ['bouquets', 'gallery', 'how', 'order', 'faq'].forEach(id => {
+    new IntersectionObserver(([en]) => {
+      if (en.isIntersecting) navLinks.forEach(a => a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + id)));
+    }, { rootMargin: '-45% 0px -50% 0px' }).observe($(id));
+  });
+  new IntersectionObserver(([en]) => { if (en.isIntersecting) navLinks.forEach(a => a.setAttribute('aria-current', 'false')); }, { rootMargin: '-45% 0px -50% 0px' }).observe(document.querySelector('.hero'));
+
+  // ---------- Mobile quick bar appears once hero buttons scroll away ----------
+  const mbar = $('mbar');
+  new IntersectionObserver(([en]) => mbar.classList.toggle('show', !en.isIntersecting && en.boundingClientRect.top < 0)).observe($('heroCtas'));
+
+  // ---------- Gold sparkles ----------
+  (function sparkles() {
+    const cv = $('sparkles'), ctx = cv.getContext('2d');
+    let w = 0, h = 0, raf = 0;
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const size = () => { const r = cv.getBoundingClientRect(); w = cv.width = Math.round(r.width * dpr); h = cv.height = Math.round(r.height * dpr); };
+    size(); addEventListener('resize', size, { passive: true });
+    const dots = Array.from({ length: innerWidth < 720 ? 28 : 60 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .4, s: Math.random() * .0006 + .0002, p: Math.random() * 6.28 }));
+    const frame = t => {
+      ctx.clearRect(0, 0, w, h);
+      for (const d of dots) {
+        const a = .25 + .75 * Math.abs(Math.sin(d.p + t * .0012));
+        if (!reduceMotion) { d.y -= d.s; if (d.y < -.02) d.y = 1.02; }
+        ctx.beginPath(); ctx.fillStyle = `rgba(246, 223, 164, ${a * .8})`;
+        ctx.arc(d.x * w, d.y * h, d.r * dpr, 0, 6.283); ctx.fill();
+      }
+    };
+    if (reduceMotion) { frame(0); return; }
+    const loop = t => { frame(t); raf = requestAnimationFrame(loop); };
+    new IntersectionObserver(([en]) => { cancelAnimationFrame(raf); if (en.isIntersecting) raf = requestAnimationFrame(loop); }).observe(cv);
+  })();
+
+  // ---------- Order form ----------
+  const val = id => $(id).value.trim();
+  const toast = $('toast');
+  const localISO = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const minDate = new Date(); minDate.setDate(minDate.getDate() + 3);
+  $('date').min = localISO(minDate);
+
+  document.querySelectorAll('[data-size]').forEach(b => b.addEventListener('click', () => { $('type').value = b.dataset.size; }));
+  $('method').addEventListener('change', () => { $('addrField').hidden = $('method').value !== 'Delivery'; });
+  ['name', 'phone', 'date'].forEach(id => $(id).addEventListener('input', () => $(id).removeAttribute('aria-invalid')));
+
+  function show(msg, bad) { toast.textContent = msg; toast.className = 'toast show' + (bad ? ' bad' : ''); }
+
+  function validate() {
+    let first = null;
+    for (const id of ['name', 'phone', 'date']) {
+      const el = $(id), v = val(id);
+      const bad = !v || (id === 'phone' && v.replace(/\D/g, '').length < 7) || (id === 'date' && v < el.min);
+      if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+      if (bad && !first) first = el;
+    }
+    if (first) { first.focus(); show('Please fix the highlighted fields.', true); return false; }
+    return true;
+  }
+
+  function buildMessage() {
+    const lines = [
+      'Hi Tanesha! I would like to order from Creations by TP.',
+      'Name: ' + val('name'),
+      'Phone: ' + val('phone'),
+      'Bouquet: ' + val('type'),
+      'Date needed: ' + val('date'),
+      'Occasion: ' + val('occasion'),
+      'Pickup/Delivery: ' + val('method') + (val('method') === 'Delivery' && val('addr') ? ' to ' + val('addr') : ''),
+    ];
+    if (val('colors')) lines.push('Colors: ' + val('colors'));
+    if (val('topper')) lines.push('Topper/ribbon: ' + val('topper'));
+    if (val('notes')) lines.push('Notes: ' + val('notes'));
+    return lines.join('\n');
+  }
+
+  const form = $('orderForm');
+  const FORM_KEY = (form.dataset.web3formsKey || '').trim();
+  if (FORM_KEY) $('sendLabel').textContent = 'Send My Order';
+
+  function smsLink() {
+    const sep = /iPhone|iPad|Macintosh/.test(navigator.userAgent) ? '&' : '?';
+    return `sms:${PHONE}${sep}body=${encodeURIComponent(buildMessage())}`;
+  }
+  function showRich(kind, title, body, link, linkText) {
+    toast.replaceChildren();
+    const t = document.createElement('strong'); t.textContent = title;
+    toast.append(t, body);
+    if (link) { const a = document.createElement('a'); a.className = 't-link'; a.href = link; a.textContent = linkText; toast.append(document.createElement('br'), a); }
+    toast.className = 'toast show ' + kind;
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!validate()) return;
+    const link = smsLink();
+    form.dataset.lastLink = link;
+
+    // No email key configured yet: hand the order to the customer's Messages app
+    if (!FORM_KEY) {
+      show('Opening your messages app with your order. Just hit send!');
+      location.href = link;
+      return;
+    }
+
+    const btn = $('sendBtn');
+    btn.disabled = true; btn.setAttribute('aria-busy', 'true'); $('sendLabel').textContent = 'Sending...';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: FORM_KEY,
+          subject: `New order: ${val('type')} for ${val('date')}`,
+          from_name: 'Creations by TP website',
+          botcheck: $('botcheck').checked,
+          Name: val('name'), Phone: val('phone'), Bouquet: val('type'), 'Date needed': val('date'),
+          Occasion: val('occasion'), 'Pickup or delivery': val('method'), 'Delivery address': val('addr'),
+          Colors: val('colors'), 'Topper / ribbon': val('topper'), Notes: val('notes'),
+          message: buildMessage(),
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.success) throw new Error(data.message || 'HTTP ' + res.status);
+      form.dataset.sent = 'true';
+      showRich('ok', 'Order sent to Tanesha!', 'She will reach out to confirm and send deposit details. Want a faster reply? Text her too.', link, 'Text my order to Tanesha');
+    } catch (err) {
+      form.dataset.sent = 'false';
+      showRich('bad', "We couldn't send that online.", 'No problem, tap below to text your order straight to Tanesha.', link, 'Text my order instead');
+    } finally {
+      btn.disabled = false; btn.removeAttribute('aria-busy'); $('sendLabel').textContent = 'Send My Order';
+    }
+  });
+
+  $('dmBtn').addEventListener('click', async () => {
+    if (!validate()) return;
+    try { await navigator.clipboard.writeText(buildMessage()); show('Order copied! Paste it into your DM to @creationsby_tp.'); }
+    catch { show('Opening Instagram. Send your order details in a DM.'); }
+    window.open('https://ig.me/m/creationsby_tp', '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
