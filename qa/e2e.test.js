@@ -108,6 +108,22 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
     const anchors = await page.evaluate(() => [...document.querySelectorAll('a[href^="#"]')].map(a => a.getAttribute('href')).filter(h => h.length > 1 && !document.querySelector(h)));
     anchors.length ? fail(vp.name, 'links', 'Dead anchors: ' + anchors.join(', ')) : pass(vp.name, 'links', 'All in-page links have targets');
 
+    // 4b. Clean URLs: no #section links; nav click updates the path, scrolls, and deep links land on the section
+    const hashLinks = await page.evaluate(() => [...document.querySelectorAll('a[href*="#"]')].map(a => a.getAttribute('href')).filter(h => !h.startsWith('#i-') && h !== '#main'));
+    hashLinks.length ? fail(vp.name, 'clean-urls', 'Links still use #: ' + hashLinks.join(', ')) : pass(vp.name, 'clean-urls', 'No #section links');
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.evaluate(() => document.querySelector('a[href="/faq/"]').click());
+    await page.waitForTimeout(1500);
+    const nav = await page.evaluate(() => ({ path: location.pathname, hash: location.hash, top: Math.round(document.getElementById('faq').getBoundingClientRect().top) }));
+    (nav.path === '/faq/' && !nav.hash && nav.top < 200) ? pass(vp.name, 'clean-urls', 'Nav click -> /faq/ and scrolls to FAQ') : fail(vp.name, 'clean-urls', 'Nav click result: ' + JSON.stringify(nav));
+    const deep = await ctx.newPage();
+    await deep.goto(new globalThis.URL('/gallery/', URL).href, { waitUntil: 'networkidle' });
+    await deep.waitForTimeout(1000);
+    const dtop = await deep.evaluate(() => Math.round(document.getElementById('gallery').getBoundingClientRect().top));
+    Math.abs(dtop) < 200 ? pass(vp.name, 'clean-urls', 'Deep link /gallery/ opens at the Gallery') : fail(vp.name, 'clean-urls', 'Deep link /gallery/ landed ' + dtop + 'px from section');
+    await deep.close();
+    await page.evaluate(() => { history.replaceState(null, '', '/'); scrollTo(0, 0); });
+
     // 5. Touch targets (mobile only)
     if (vp.mobile) {
       const small = await page.evaluate(() => [...document.querySelectorAll('a, button, input, select, textarea, summary, [role=button]')]
