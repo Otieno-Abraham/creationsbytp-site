@@ -11,14 +11,22 @@
 <meta property="og:url" content="https://creationsbytp.com/">
 <meta property="og:title" content="Creations by TP | Custom Money Bouquets">
 <meta property="og:description" content="Handmade money, rose, burn, bottle and diaper bouquets. The cash is included. Order yours today.">
-<meta property="og:image" content="https://creationsbytp.com/assets/large.jpg">
+<meta property="og:site_name" content="Creations by TP">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://creationsbytp.com/assets/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Creations by TP: custom money bouquets, the cash is included">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creations by TP | Custom Money Bouquets">
+<meta name="twitter:description" content="Handmade money, rose, burn, bottle and diaper bouquets. The cash is included. Order yours today.">
+<meta name="twitter:image" content="https://creationsbytp.com/assets/share.jpg">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/video1.webp">
+<link rel="preload" as="image" href="assets/video1.webp" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,7 +37,7 @@
   "description": "Custom money bouquets, burn bouquets, bottle bouquets and diaper bouquets. Pickup and delivery available.",
   "telephone": "+1-302-357-5065",
   "email": "hello@creationsbytp.com",
-  "image": "https://creationsbytp.com/assets/large.jpg",
+  "image": "https://creationsbytp.com/assets/share.jpg",
   "logo": "https://creationsbytp.com/assets/logo-main.jpg",
   "sameAs": ["https://www.instagram.com/creationsby_tp/", "https://www.tiktok.com/@taneshap1105"],
   "priceRange": "$70-$350",
@@ -604,6 +612,7 @@
         <button type="button" data-filter="Baby" aria-pressed="false">Baby</button>
       </div>
       <div class="gallery" id="galleryGrid"></div>
+      <noscript><p style="text-align:center;color:var(--muted)">The full gallery needs JavaScript. See every bouquet on <a href="https://www.instagram.com/creationsby_tp/" rel="noopener">Instagram</a> or <a href="https://www.tiktok.com/@taneshap1105" rel="noopener">TikTok</a>.</p></noscript>
       <div class="ig-cta"><a class="btn btn-ghost" href="https://www.instagram.com/creationsby_tp/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a><a class="btn btn-ghost" href="https://www.tiktok.com/@taneshap1105" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</a></div>
     </div>
   </section>
@@ -641,6 +650,7 @@
       <div class="order-grid">
         <!-- Paste the Web3Forms access key (made with Tanesha's email at web3forms.com) into data-web3forms-key.
              Empty = orders are sent by text message only. -->
+        <noscript><p style="text-align:center;margin-bottom:16px">Ordering needs JavaScript. Text <a href="sms:+13023575065">302-357-5065</a> or email <a href="mailto:hello@creationsbytp.com">hello@creationsbytp.com</a> instead.</p></noscript>
         <form class="panel reveal" id="orderForm" novalidate aria-label="Order request" data-web3forms-key="f28feab6-e5d9-424d-a824-574ca5f9cf1a">
           <div class="row">
             <div class="field"><label for="name">Your name <span class="req" aria-hidden="true">*</span></label><input id="name" required autocomplete="name" aria-describedby="name-err"><div class="err" id="name-err">Please add your name.</div></div>
@@ -786,6 +796,7 @@
 <script>
   const PHONE = '+13023575065';
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = !!(navigator.connection && navigator.connection.saveData);
   const $ = id => document.getElementById(id);
   $('yr').textContent = new Date().getFullYear();
 
@@ -826,7 +837,7 @@
 
   // Gallery videos autoplay muted while on screen; paused when scrolled away, filtered out, or reduced motion is on
   const tileVids = [...grid.querySelectorAll('video')];
-  if (!reduceMotion) {
+  if (!reduceMotion && !saveData) {
     const vidIO = new IntersectionObserver(entries => entries.forEach(en => {
       const v = en.target;
       if (en.isIntersecting && !lb.open) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause();
@@ -864,8 +875,10 @@
   document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; revealIO.observe(el); });
 
   // ---------- Hero video: play only while visible, never with reduced motion ----------
+  // Stop all video when the tab is hidden; skip autoplay on data saver
+  document.addEventListener('visibilitychange', () => { if (document.hidden) document.querySelectorAll('video').forEach(v => v.pause()); });
   const heroVid = $('heroVid');
-  if (!reduceMotion) new IntersectionObserver(([en]) => en.isIntersecting ? heroVid.play().catch(() => {}) : heroVid.pause()).observe(heroVid);
+  if (!reduceMotion && !saveData) new IntersectionObserver(([en]) => en.isIntersecting ? heroVid.play().catch(() => {}) : heroVid.pause()).observe(heroVid);
 
   // ---------- Active nav link ----------
   const navLinks = [...document.querySelectorAll('.nav-links a')];
