@@ -17,7 +17,7 @@ Live at **https://creationsbytp.com**, hosted on GitHub Pages.
 
 ## Common edits
 
-- **Prices:** search `index.html` for `$150`, `$250`, `$275`, `$350` (price cards, order form options and the JSON-LD block near the top).
+- **Prices:** search `index.html` for `$125`, `$225`, `$275`, `$325` (price cards, order form options and the JSON-LD block near the top).
 - **Order emails:** paste the Web3Forms access key into `data-web3forms-key=""` on the `<form id="orderForm">` line. Leave it empty to send orders by text message only.
 - **Gallery:** edit the `GALLERY` list in the script at the bottom of `index.html`, and add files to `site/assets/`.
 

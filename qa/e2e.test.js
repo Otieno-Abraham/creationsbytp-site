@@ -210,9 +210,9 @@ const pass = (vp, area, msg) => results.push({ vp, area, msg, ok: true });
     const key = await page.getAttribute('#orderForm', 'data-web3forms-key');
     /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(key || '') && (await page.textContent('#sendLabel')) === 'Send My Order'
       ? pass(vp.name, 'form', 'Order emails are switched on (Web3Forms key present)') : fail(vp.name, 'form', 'Web3Forms key missing or malformed: ' + key);
-    // Current prices (client-confirmed): X-Small 150, Small 250, Medium 300, Large 350
+    // Current prices (client-confirmed): X-Small 125, Small 225, Medium 275, Large 325
     const prices = await page.evaluate(() => [...document.querySelectorAll('.size .price')].map(e => e.textContent.trim()).join(','));
-    prices === '$150,$250,$300,$350' ? pass(vp.name, 'content', 'Prices correct: ' + prices) : fail(vp.name, 'content', 'Prices wrong: ' + prices);
+    prices === '$125,$225,$275,$325' ? pass(vp.name, 'content', 'Prices correct: ' + prices) : fail(vp.name, 'content', 'Prices wrong: ' + prices);
     const mail = await page.evaluate(() => ({ links: document.querySelectorAll('a[href="mailto:hello@creationsbytp.com"]').length, ld: JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent).email }));
     mail.links >= 2 && mail.ld === 'hello@creationsbytp.com' ? pass(vp.name, 'content', 'Business email hello@ linked (contact + footer + schema)') : fail(vp.name, 'content', 'Email links ' + JSON.stringify(mail));
     // Social links present
